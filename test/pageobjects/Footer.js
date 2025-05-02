@@ -1,8 +1,6 @@
-import { $ } from '@wdio/globals';   // ✅ Needed: To select elements like buttons, inputs, etc.
+import { $ } from '@wdio/globals';
 import Page from './page.js';
-import hamburgerMenu from "./HamburgerMenu";        // ✅ Needed: To extend the shared base Page class
 import { expect } from '@wdio/globals';
-import ShoppingCart from "./ShoppingCart";
 import HamburgerMenu from "./HamburgerMenu";
 
 
@@ -16,13 +14,11 @@ class FooterOfPage extends Page {
         return this.mainPGfooter.$$('a');
     }
 
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
 
-    async FooterTestFlow () {
+    async footerTestFlow () {
         await HamburgerMenu.Acceptcookies();
         await expect(this.mainPGfooter).toExist();
         await this.checkAllFooterLinks();

@@ -1,6 +1,7 @@
 import { $ } from '@wdio/globals';
 import { expect } from '@wdio/globals';
 import Page from './page.js';
+import ProductListingInfo from "./ProductListingInfo";
 
 class HamburgerMenu extends Page {
 
@@ -613,22 +614,20 @@ class HamburgerMenu extends Page {
 /////////////////////////////////////////////                               ///////////////////////////////////////////
 
 
-    async BurgerMenuTestFlow () {
-        await this.Acceptcookies()
-        await this.ToggleHamburgerMenu()
-        await this.MainNavigationLinks()
+    async burgerMenuTestFlow () {
+        await this.ToggleHamburgerMenu();
+        await this.MainNavigationLinks();
     }
 
     async Acceptcookies () {
-         await expect(this.inMusicHeader).toExist()
-         await expect(this.accptCkies).toExist()
+         await expect(this.inMusicHeader).toExist();
+         await expect(this.accptCkies).toExist();
          await this.accptCkies.click();
     }
 
     async ToggleHamburgerMenu () {
          await this.hamBurgermenuIcon.click();
          await expect(this.hamBurgermenuOpen).toBeExisting();
-         //await this.hamBurgermenuclose.click();
     }
 
     ////////////////////////////////////////////////////////////////////////
@@ -639,6 +638,7 @@ class HamburgerMenu extends Page {
          await this.shopBycategoryLink.click();
          await expect(this.sbcHeader).toExist();
          await expect(this.filterSection).toExist();
+         await ProductListingInfo.productListTestflow();
          await this.ToggleHamburgerMenu();
          await this.exploreAllBrandslink.click();
          await expect(this.expAllbrndsHeader).toExist();
@@ -1049,13 +1049,6 @@ class HamburgerMenu extends Page {
     async clickSubmenuButtons (index) {
         await browser.execute((i) => {
             const buttons = [...document.querySelectorAll('div[tabindex="0"]')];
-            if (buttons[i]) buttons[i].click();
-        }, index);
-    }
-
-    async GobackSubmenuButtons (index) {
-        await browser.execute((i) => {
-            const buttons = [...document.querySelectorAll('div[title="Left"]')];
             if (buttons[i]) buttons[i].click();
         }, index);
     }

@@ -1,6 +1,6 @@
-import { $ } from '@wdio/globals';   // ✅ Needed: To select elements like buttons, inputs, etc.
+import { $ } from '@wdio/globals';
 import Page from './page.js';
-import hamburgerMenu from "./HamburgerMenu";        // ✅ Needed: To extend the shared base Page class
+import hamburgerMenu from "./HamburgerMenu";
 import { expect } from '@wdio/globals';
 
 
@@ -90,7 +90,7 @@ class ShoppingCart extends Page {
     ///////////////////             /////////////////////           ////////////////////        ////////////
 
 
-    async ShopCartTestflow () {
+    async shopCartTestflow () {
         await this.OpenShoppingCart();
         await this.CheckEmptycart();
         await this.AddItem();
@@ -102,7 +102,6 @@ class ShoppingCart extends Page {
     //////////////////////////              ///////////////////////////////////////////////////////////////////
 
     async OpenShoppingCart () {
-        //await hamburgerMenu.Acceptcookies();
         await this.shopCarticon.click();
         await expect(this.shopCartHeader).toExist();
     }
@@ -153,7 +152,7 @@ class ShoppingCart extends Page {
         await expect(this.increaseQuantity).toExist();
         for (let i = 0; i < 3; i++) {
             await this.increaseQuantity.click();
-            await browser.pause(1000);
+            //await browser.pause(1000);
         }
     }
 
@@ -161,12 +160,12 @@ class ShoppingCart extends Page {
         await expect(this.decreaseQuantity).toExist();
         for (let i=0; i < 3; i++) {
             await this.decreaseQuantity.click();
-            await browser.pause(1000);
+            //await browser.pause(1000);
         }
     }
 
 
-    async HomeMenuButton (index) {
+    async homeMenuButton (index) {
         await browser.execute((i) => {
             const buttons = [...document.querySelectorAll('img[title="Home inMusic Store"]')];
             if (buttons[i]) buttons[i].click();

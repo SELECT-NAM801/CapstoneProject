@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312a14c0-73e6-45f1-85ca-b3d4695b2097" name="Changes" comment="first file commit pt2">
-      <change afterPath="$PROJECT_DIR$/test/pageobjects/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pageobjects/HamburgerMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pageobjects/ProductListingInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pageobjects/ShoppingCart.js" afterDir="false" />
+    <list default="true" id="312a14c0-73e6-45f1-85ca-b3d4695b2097" name="Changes" comment="Code review from class mate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pageobjects/login.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/login.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pageobjects/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pageobjects/secure.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/secure.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/specs/test.e2e.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/MainTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/HamburgerMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/HamburgerMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/ProductListingInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/ProductListingInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/ShoppingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/ShoppingCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/login.page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/specs/MainTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/MainTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +130,8 @@
       <workItem from="1746020116867" duration="6457000" />
       <workItem from="1746043581012" duration="5924000" />
       <workItem from="1746106760287" duration="9068000" />
-      <workItem from="1746139285871" duration="3138000" />
+      <workItem from="1746139285871" duration="16657000" />
+      <workItem from="1746200431748" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="first file commit pt2">
       <option name="closed" value="true" />
@@ -142,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744729633763</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Code review from class mate">
+      <option name="closed" value="true" />
+      <created>1746157848985</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746157848985</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +157,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first file commit pt2" />
-    <option name="LAST_COMMIT_MESSAGE" value="first file commit pt2" />
+    <MESSAGE value="Code review from class mate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code review from class mate" />
   </component>
 </project>
