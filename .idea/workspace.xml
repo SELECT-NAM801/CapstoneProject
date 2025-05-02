@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312a14c0-73e6-45f1-85ca-b3d4695b2097" name="Changes" comment="" />
+    <list default="true" id="312a14c0-73e6-45f1-85ca-b3d4695b2097" name="Changes" comment="first file commit pt2">
+      <change afterPath="$PROJECT_DIR$/test/pageobjects/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pageobjects/HamburgerMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pageobjects/ProductListingInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pageobjects/ShoppingCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/login.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/login.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/secure.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/secure.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/specs/test.e2e.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/MainTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,25 +52,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebdriverIO.All Tests.executor": "Run",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "22.14.0",
-    "javascript.nodejs.core.library.typings.version": "22.14.1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.wdio.wdio_node_package_dir": "/Users/nate/Desktop/Automation/capstone/node_modules/@wdio/cli",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebdriverIO.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.14.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nate/Desktop/Automation/capstone/test/pageobjects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.wdio.wdio_node_package_dir&quot;: &quot;/Users/nate/Desktop/Automation/capstone/node_modules/@wdio/cli&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/nate/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/pageobjects" />
+      <recent name="$PROJECT_DIR$/test/specs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -86,11 +110,46 @@
       <option name="presentableId" value="Default" />
       <updated>1744727622838</updated>
       <workItem from="1744727624662" duration="1417000" />
-      <workItem from="1744729162690" duration="327000" />
+      <workItem from="1744729162690" duration="2292000" />
+      <workItem from="1744897608472" duration="141000" />
+      <workItem from="1745242871109" duration="7814000" />
+      <workItem from="1745292308680" duration="435000" />
+      <workItem from="1745501723254" duration="8786000" />
+      <workItem from="1745518400483" duration="4667000" />
+      <workItem from="1745542773624" duration="1315000" />
+      <workItem from="1745588192248" duration="9876000" />
+      <workItem from="1745709328488" duration="319000" />
+      <workItem from="1745718391530" duration="176000" />
+      <workItem from="1745847424481" duration="8279000" />
+      <workItem from="1745868089675" duration="5751000" />
+      <workItem from="1745893959696" duration="112000" />
+      <workItem from="1745894094184" duration="262000" />
+      <workItem from="1745894408160" duration="10193000" />
+      <workItem from="1745934157923" duration="2803000" />
+      <workItem from="1745937129571" duration="5510000" />
+      <workItem from="1745951715484" duration="3738000" />
+      <workItem from="1745984464761" duration="1865000" />
+      <workItem from="1746020116867" duration="6457000" />
+      <workItem from="1746043581012" duration="5924000" />
+      <workItem from="1746106760287" duration="9068000" />
+      <workItem from="1746139285871" duration="3138000" />
     </task>
+    <task id="LOCAL-00001" summary="first file commit pt2">
+      <option name="closed" value="true" />
+      <created>1744729633763</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744729633763</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first file commit pt2" />
+    <option name="LAST_COMMIT_MESSAGE" value="first file commit pt2" />
   </component>
 </project>
