@@ -1,10 +1,9 @@
 import { $ } from '@wdio/globals';
-import Page from './page.js';
+import Base from './Base.js';
 import { expect } from '@wdio/globals';
-import HamburgerMenu from "./HamburgerMenu";
+import mainExports from "./mainExports";
 
-
-class FooterOfPage extends Page {
+class FooterOfPage extends Base {
 
     get mainPGfooter() {
         return $('.bg-accent-black.border-t.border-accent-black.page-footer.text-white')
@@ -14,12 +13,8 @@ class FooterOfPage extends Page {
         return this.mainPGfooter.$$('a');
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////
-
     async footerTestFlow () {
-        await HamburgerMenu.Acceptcookies();
+        await mainExports.acceptCookies();
         await expect(this.mainPGfooter).toExist();
         await this.checkAllFooterLinks();
     }
@@ -45,8 +40,8 @@ class FooterOfPage extends Page {
         }
     }
 
-    open () {
-        return super.open();
+    website () {
+        return super.website();
     }
 }
 

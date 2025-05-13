@@ -1,20 +1,10 @@
 import { $ } from '@wdio/globals';
-import Page from './page.js';
+import Base from './Base.js';
 import { expect } from '@wdio/globals';
 
-//////////////// This is being triggered in the HamburgerMenu ////////////////////
+class ProductListingInfo extends Base {
 
-class ProductListingInfo extends Page {
-
-    get expAllbrandsPage() {
-        return $('div.products.wrapper.mode-grid.products-grid')
-    }
-
-    get shpByctgryPage() {
-        return $('div.products.wrapper.mode-grid.products-grid')
-    }
-
-    get tpSellersPage() {
+    get mainPages() {
         return $('div.products.wrapper.mode-grid.products-grid')
     }
 
@@ -35,9 +25,6 @@ class ProductListingInfo extends Page {
         return $('.filter-current')
     }
 
-    //////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     async productListTestflow() {
         await this.clickAllMoreInfoButtons();
         await this.akaiFilterclick();
@@ -55,10 +42,9 @@ class ProductListingInfo extends Page {
         const brandCheckboxes = await $$('div.linchpin_productbrandFilter');
 
         for (const brand of brandCheckboxes) {
-            const labelSpan = await brand.$('div'); // Adjust selector if needed
+            const labelSpan = await brand.$('div');
             const brandName = await labelSpan.getText();
 
-            // Click to select
             await brand.click();
             console.log(`Clicked to select: ${brandName}`);
             await browser.pause(1000);
@@ -68,10 +54,9 @@ class ProductListingInfo extends Page {
             await expect(this.brandsFilter).toBeDisplayed();
             await this.brandsFilter.click();
 
-            // Click again to deselect
             await brand.click();
             console.log(`Clicked to deselect: ${brandName}`);
-            await browser.pause(500);
+           await browser.pause(500);
 
             await expect(this.currentFilter).not.toExist();
         }
@@ -103,8 +88,8 @@ class ProductListingInfo extends Page {
 
 
 
-    open () {
-        return super.open('');
+    website () {
+        return super.website('');
     }
 }
 

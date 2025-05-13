@@ -1,11 +1,12 @@
 import { $ } from '@wdio/globals';
-import Page from './page.js';
-import hamburgerMenu from "./HamburgerMenu";
+import Base from './Base.js';
+import hamburgerMenu from "../pageobjects/HamburgerMenu";
 import { expect } from '@wdio/globals';
+import mainExports from "../pageobjects/mainExports";
 
 
 
-class ShoppingCart extends Page {
+class ShoppingCart extends Base {
 
     get shopCarticon () {
         return $('div[class="w-6 h-6 text-white"]');
@@ -84,10 +85,10 @@ class ShoppingCart extends Page {
         return $('span[x-text="cart.summary_count"]');
     }
 
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////                           ////////////////////////////////////////////////////
-    ///////////////////             /////////////////////           ////////////////////        ////////////
+    get shopByCategoryLink () {
+        const selector = '//h4/span[contains(text(), "Shop by Category")]'
+        return $(selector);
+    }
 
 
     async shopCartTestflow () {
@@ -97,9 +98,6 @@ class ShoppingCart extends Page {
         await this.RemoveItem();
         await this.CheckEmptycart();
     }
-
-////////////////////////////////////////////////////////////            ///////////////////////////////
-    //////////////////////////              ///////////////////////////////////////////////////////////////////
 
     async OpenShoppingCart () {
         await this.shopCarticon.click();
@@ -113,8 +111,8 @@ class ShoppingCart extends Page {
     }
 
     async AddItem () {
-        await hamburgerMenu.ToggleHamburgerMenu();
-        await hamburgerMenu.shopBycategoryLink.click();
+        await mainExports.toggleHamburgerMenu();
+        await this.shopByCategoryLink.click();
         await expect(hamburgerMenu.sbcHeader).toBeDisplayed();
         await expect(this.prodListPage).toExist();
         await expect(this.nitroAmpProdPage).toExist();
@@ -125,6 +123,9 @@ class ShoppingCart extends Page {
         await expect(this.addToCartButton).toExist();
         await this.addToCartButton.click();
         await expect(this.amountOfitems).not.toBeDisplayed();
+    }
+
+    async RemoveItem () {
         await expect(this.itemInfo).toExist();
         await expect(this.qtyField).toExist();
         await this.DecreaseItems();
@@ -136,23 +137,15 @@ class ShoppingCart extends Page {
         await this.viewEditcart.click();
         await expect(this.shopCartHeader).toBeDisplayed();
         await expect(this.nitroAmpShopCart).toExist();
-    }
-
-    async RemoveItem () {
         await expect(this.xbutton).toExist();
         await this.xbutton.click();
         await expect(this.emptycartText).toBeDisplayed();
     }
 
-
-///////////////             ///////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////                //////////////////////////////////////////
-
     async IncreaseItems () {
         await expect(this.increaseQuantity).toExist();
         for (let i = 0; i < 3; i++) {
             await this.increaseQuantity.click();
-            //await browser.pause(1000);
         }
     }
 
@@ -160,7 +153,6 @@ class ShoppingCart extends Page {
         await expect(this.decreaseQuantity).toExist();
         for (let i=0; i < 3; i++) {
             await this.decreaseQuantity.click();
-            //await browser.pause(1000);
         }
     }
 
@@ -172,11 +164,9 @@ class ShoppingCart extends Page {
         }, index);
     }
 
-            //////////////      ////////////////////////////////////////////////////////////////////////////                ////////////////
-/////////////           ////////////////////////////////////////////////////            /////////////////////////////////////////
 
-    open () {
-        return super.open('');
+    website () {
+        return super.website('');
     }
 }
 
